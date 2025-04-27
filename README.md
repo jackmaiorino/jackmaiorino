@@ -38,7 +38,7 @@ Manages the training process of the RLModel, coordinating multiple game simulati
 - **OpenAI Embeddings**: Leverages OpenAI's API for generating embeddings, enhancing the AI's understanding of game elements.
 - **Multi-threaded Training**: Accelerates the training process by running multiple game simulations concurrently.
 
-##  Win Rate Over Time
+##  Win Rate Over Time (Reworking under new Transformer Model)
 
 | Date       | Win Rate | Notes |
 |------------|---------|-------|
