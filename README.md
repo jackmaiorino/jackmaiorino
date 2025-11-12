@@ -38,8 +38,18 @@ Manages the training process of the RLModel, coordinating multiple game simulati
 - **OpenAI Embeddings**: Leverages OpenAI's API for generating embeddings, enhancing the AI's understanding of game elements.
 - **Multi-threaded Training**: Accelerates the training process by running multiple game simulations concurrently.
 
-##  Win Rate Over Time (Reworking under new Transformer Model)
+### Model Versions & Evaluation History
 
-| Date       | Win Rate | Notes |
-|------------|---------|-------|
-| ??? | ?%   | ???? |
+| Epochs | Version | Win Rate | Notes | Date |
+|--------|---------|----------|-------|------|
+| ~2000  | v1      | 29.17%   | Non-greedy selection. | 6/21/25 |
+| ~2000  | v1.1    | 20.83%   | Changed so **pass** is always option 0. Aggressive long game penalty. Spell/action choice looks good, but spell targeting is awful (might be defaulting to targeting self). | 6/29/25 |
+| ~2000  | v1.1    | 29.17%   | Changed targeting to use same logic as `ComputerPlayer7`, but did **not** retrain. | 7/11/25 |
+| ~9k    | v1.2    | 43.75%   | Uses `ComputerPlayer7` targeting and retrained. | 7/12/25 |
+| ~9k    | v1.2    | 41.67%   | Re-evaluation run. | 7/12/25 |
+
+### WORK PAUSED
+I have since stopped work on this project due to a couple factors
+1. I believe I am starting to reach compute bottlenecks during training. I don't have the money right now for cloud resources so I will have to wait.
+2. I started grad school for Machine Learning alongside working full-time I just don't have freetime for this especially with being mostly resource constrained.
+
